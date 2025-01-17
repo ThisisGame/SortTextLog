@@ -28,6 +28,11 @@ void writeLines(const std::string& filename, const std::vector<std::string>& lin
         if (++lineCount % 10000 == 0) {
             std::cout << "Written " << lineCount << " lines" << std::endl;
         }
+
+        //仅输出前10w行
+        if (lineCount == 100000) {
+            break;
+        }
     }
 }
 
